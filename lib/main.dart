@@ -187,7 +187,35 @@ class MyHomePage extends StatelessWidget {
 class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Second Page")));
+    return Scaffold(
+        body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.only(top:20, bottom:20,left: 20),
+
+              child: ClipOval(
+                child: Image.network(
+                  "https://www.worldanimalprotection.us/cdn-cgi/image/width=1280,format=auto/siteassets/images/farming/pigs/pig-in-field-getty.png",
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+
+                ),
+              ),
+
+            ),
+
+           Row(
+             children: [
+               Container()
+             ],
+           )
+
+
+
+          ],
+        )));
 
 
   }
